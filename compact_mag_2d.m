@@ -55,7 +55,7 @@ for i=1:nx
 end
 %Calculated magnetic response
 V_rs = reshape(V,nb,1);
-dBdz = Fe.*Kernell*V_rs;
+anom_mag= Fe.*Kernell*V_rs;
 
 %Plot kernel matrix
 figure(1)
@@ -70,7 +70,7 @@ colormap(jet)
 
 figure(2)
 subplot(2,1,1)
-plot(x,dBdz,'*-b')
+plot(x,anom_mag,'*-b')
 xlabel('Distance (m)','FontWeight','bold','FontSize',10)
 ylabel('Magnetic Anomaly(nT)','FontWeight','bold','FontSize',10)
 title('Geomagnetic Response','FontWeight','bold','FontSize',10)
